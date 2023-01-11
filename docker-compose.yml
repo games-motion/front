@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    entrypoint: ./.docker/entrypoint.sh
+    tty: true
+    mem_limit: 500M
+    cpus: 0.5
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app

@@ -1,0 +1,20 @@
+{
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+    // "source.organizeImports": true
+  },
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "aspnetcorerazor": "html",
+    "twig": "html"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
