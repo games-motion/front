@@ -1,29 +1,37 @@
 import { UsersFour } from 'phosphor-react'
-import { faker } from '@faker-js/faker'
+import { Tooltip } from 'shared'
 
-import { Container, ListInfos, Tag, ContainerUserInformations } from './styles'
+import { Container, ListInfos, Tag, ContainerUserInformations, ProfileDetails } from './styles'
+
+const games = ['cs-go', 'valorant', 'Red dead', 'cyberpunk']
 
 export function Profile() {
   return (
     <Container>
-      <img src={faker.internet.avatar()} alt="" />
+      <Tooltip title="Icaro Vieira">
+        <img src="https://github.com/IcaroSilvaFK.png" alt="Icaro Vieira" />
+      </Tooltip>
 
       <div>
         <ContainerUserInformations>
-          <span>{faker.internet.userName()}</span>
+          <span>Icaro Vieira</span>
           <span>@whyy</span>
         </ContainerUserInformations>
-        <ListInfos>
-          <li>
-            <div>
+        <ProfileDetails>
+          <div>
+            <span>
               <UsersFour size={32} />
-              <span>iK</span>
-            </div>
-            <span>Brasil</span>
-          </li>
-          <li>
-            <Tag>Read dead</Tag>
-          </li>
+              iK
+            </span>
+          </div>
+          <span>Brasil</span>
+        </ProfileDetails>
+        <ListInfos>
+          {games.map((game) => (
+            <li key={game}>
+              <Tag>{game}</Tag>
+            </li>
+          ))}
         </ListInfos>
       </div>
     </Container>
