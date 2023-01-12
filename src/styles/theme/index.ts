@@ -1,26 +1,37 @@
+// Uso:
+// Cor principal - 500
+// Erro principal - 600
+// Sucesso principal - 400
+
 export const theme = {
   colors: {
     brand: {
-      'royal-blue-50': '#f0f6fe',
-      'royal-blue-100': '#deebfb',
-      'royal-blue-200': '#c5ddf8',
-      'royal-blue-300': '#9cc9f4',
-      'royal-blue-400': '#6daaed',
-      'royal-blue-500': '#4083e4',
-      'royal-blue-600': '#366eda',
-      'royal-blue-700': '#2d5ac8',
-      'royal-blue-800': '#2b4aa2',
-      'royal-blue-900': '#274281',
+      'blue-50': '#f0f6fe',
+      'blue-100': '#deebfb',
+      'blue-200': '#c5ddf8',
+      'blue-300': '#9cc9f4',
+      'blue-400': '#6daaed',
+      'blue-500': '#4083e4',
+      'blue-600': '#366eda',
+      'blue-700': '#2d5ac8',
+      'blue-800': '#2b4aa2',
+      'blue-900': '#274281',
     },
     neutral: {
-      'black': '#121212',
-      'white': '#f2f2f2',
-      'gray': '#525252',
-      'light-gray': '#F3F2EF',
+      black: '#121212',
+      white: '#f2f2f2',
     },
-    indicative: {
-      error: '#e74c4c',
-      success: '#30cf43',
+    red: {
+      'red-50': '#fef2f2',
+      'red-100': '#fee2e2',
+      'red-200': '#fecaca',
+      'red-300': '#fca5a5',
+      'red-400': '#f87171',
+      'red-500': '#ef4444',
+      'red-600': '#dc2626',
+      'red-700': '#b91c1c',
+      'red-800': '#991b1b',
+      'red-900': ' #7f1d1d',
     },
     green: {
       50: '#F0FFF4',
@@ -46,19 +57,6 @@ export const theme = {
       800: '#363c56',
       900: '#171923',
     },
-    royalBlue: {
-      50: '#f0f6fe',
-      100: '#deebfb',
-      200: '#c5ddf8',
-      300: '#9cc9f4',
-      400: '#6daaed',
-      500: '#4083e4',
-      600: '#4083e4',
-      700: '#4083e4',
-      800: '#4083e4',
-      900: '#274281',
-    },
-    white: '#fff',
   },
   fontWeights: {
     hairline: 100,
@@ -125,7 +123,7 @@ export const theme = {
     '7xl': '80rem',
     '8xl': '90rem',
   },
-  radii: {
+  radius: {
     'none': '0',
     'sm': '0.125rem',
     'base': '0.25rem',
