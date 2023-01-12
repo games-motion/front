@@ -1,19 +1,17 @@
-import { Page } from '../../@types/page'
 import { Layout } from 'layout'
 
-import { Container } from './styles'
+import { ProfileDetails } from 'components'
 
-const Page: Page = () => {
+import { Container } from 'styles/pages/Team.styles'
+
+export default function Page() {
   return (
     <>
-      <></>
-      <Container>
-        <h1>Hello world</h1>
-      </Container>
+      <Layout>
+        <Container>
+          <ProfileDetails />
+        </Container>
+      </Layout>
     </>
   )
 }
-
-Page.getLayout = (page) => <Layout>{page}</Layout>
-
-export default Page

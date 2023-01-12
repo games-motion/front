@@ -1,4 +1,5 @@
 import { Profile } from 'components'
+import { DefaultHeader } from 'components/DefaultHeader'
 import { ReactNode } from 'react'
 
 import { Container, Nav, Aside } from './styles'
@@ -11,14 +12,17 @@ export function Layout(props: ILayoutProps) {
   const { children } = props
 
   return (
-    <Container>
-      <Nav>
-        <Profile />
-      </Nav>
-      {children}
-      <Aside>
-        <div />
-      </Aside>
-    </Container>
+    <>
+      <DefaultHeader />
+      <Container>
+        <Nav>
+          <Profile />
+        </Nav>
+        {children}
+        <Aside>
+          <div />
+        </Aside>
+      </Container>
+    </>
   )
 }

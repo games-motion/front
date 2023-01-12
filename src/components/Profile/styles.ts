@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
 
   border-radius: ${({ theme }) => theme.radius.base};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -18,7 +19,6 @@ export const Container = styled.div`
     max-width: 120px;
     border-radius: ${({ theme }) => theme.radius.md};
     margin-top: -80px;
-
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   }
 `

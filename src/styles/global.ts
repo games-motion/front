@@ -13,7 +13,8 @@ export const GlobalStyle = createGlobalStyle`
 
     font-size: 1rem;
     font-family: ${({ theme }) => theme.fonts.montserrat};
-    background:${({ theme }) => theme.colors.gray[900]}
+    background:${({ theme }) => theme.colors.gray[900]};
+    color:${({ theme }) => theme.colors.gray[100]}
   }
 
   button{
