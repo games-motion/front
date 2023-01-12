@@ -12,6 +12,8 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
 
     font-size: 1rem;
+    font-family: ${({ theme }) => theme.fonts.montserrat};
+    background:${({ theme }) => theme.colors.gray[900]}
   }
 
   button{
