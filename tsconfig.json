@@ -9,7 +9,8 @@
       "@helpers": ["helpers/"],
       "@configs": ["configs/"],
       "@infra": ["infra/"],
-      "@title": ["infra/shared/Head"]
+      "@title": ["infra/shared/Head"],
+      "@shared":["shared/"]
     },
     "allowJs": true,
     "skipLibCheck": true,
