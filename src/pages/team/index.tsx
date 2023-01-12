@@ -1,8 +1,9 @@
-import type { NextPage } from 'next'
+import { Page } from '../../@types/page'
+import { Layout } from 'layout'
 
 import { Container } from './styles'
 
-const Page: NextPage = () => {
+const Page: Page = () => {
   return (
     <>
       <></>
@@ -12,5 +13,7 @@ const Page: NextPage = () => {
     </>
   )
 }
+
+Page.getLayout = (page) => <Layout>{page}</Layout>
 
 export default Page
