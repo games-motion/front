@@ -1,6 +1,8 @@
+import type { NextPage } from 'next'
+
 import { Container } from './styles'
 
-export default function Page() {
+const Page: NextPage = () => {
   return (
     <>
       <></>
@@ -10,3 +12,5 @@ export default function Page() {
     </>
   )
 }
+
+export default Page
