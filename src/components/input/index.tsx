@@ -5,7 +5,7 @@ interface InputDataProps {
   type?: 'email' | 'password' | 'text'
 }
 
-type InputProps = JSX.IntrinsicElements['input'] & InputDataProps
+export type InputProps = JSX.IntrinsicElements['input'] & InputDataProps
 
 export default function Input({ label = 'login', placeholder, type = 'text' }: InputProps) {
   return (

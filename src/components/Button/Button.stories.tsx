@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
+
 import { theme } from '../../styles/theme'
+import { GlobalStyle } from '../../styles/global'
 
 import { Button, IButtonProps } from '.'
 
@@ -11,13 +13,14 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Story />
       </ThemeProvider>
     ),
   ],
 } as Meta<IButtonProps>
 
-export const Default: StoryObj<IButtonProps> = {
+export const Solid: StoryObj<IButtonProps> = {
   args: {
     children: 'Button',
     variant: 'solid',
