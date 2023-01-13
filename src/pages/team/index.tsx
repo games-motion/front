@@ -1,15 +1,19 @@
 import { Layout } from 'layout'
 
-import { ProfileDetails } from 'components'
+import { Button, NextMatches, ProfileDetails } from 'components'
 
-import { Container } from 'styles/pages/Team.styles'
+import { Container, FirstSection } from 'styles/pages/Team.styles'
 
 export default function Page() {
   return (
     <>
       <Layout>
         <Container>
-          <ProfileDetails />
+          <FirstSection>
+            <ProfileDetails />
+            <NextMatches />
+          </FirstSection>
+          <Button variant="solid">hello world</Button>
         </Container>
       </Layout>
     </>

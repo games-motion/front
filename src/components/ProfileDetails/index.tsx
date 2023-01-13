@@ -1,10 +1,12 @@
 import { DotsThree, Plus } from 'phosphor-react'
-import ReactCountryFlag from 'react-country-flag'
 import { Tooltip } from 'shared'
+import { formatDate } from 'utils/format-date'
 
 import { Container, Body, Footer, Header } from './styles'
 
 export function ProfileDetails() {
+  const starterAt = formatDate(new Date().toISOString(), 'dd/MM/yyyy')
+
   return (
     <Container>
       <Header>
@@ -16,26 +18,26 @@ export function ProfileDetails() {
         </Tooltip>
       </Header>
       <Body>
-        <img src="https://github.com/IcaroSilvaFK.png" alt="" />
+        <img
+          src="https://res.cloudinary.com/dlf01tbs6/image/upload/v1670283656/5225004_whehlp.png"
+          alt=""
+        />
         <div>
-          <span>Icaro Vieira</span>
+          <span>whyy</span>
           <ul>
             <li>
-              <span>Nickname:</span>
-              <span>whyy</span>
+              <span>posição:</span>
+              <span>membro</span>
             </li>
 
             <li>
-              <span>Country:</span>
-              <span>
-                Brasil
-                <ReactCountryFlag countryCode="BR" svg />
-              </span>
+              <span>inicio:</span>
+              <span>{starterAt}</span>
             </li>
 
             <li>
-              <span>Team:</span>
-              <span>iK</span>
+              <span>Line:</span>
+              <span>CS-GO</span>
             </li>
           </ul>
         </div>

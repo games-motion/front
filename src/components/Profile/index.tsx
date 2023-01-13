@@ -9,7 +9,10 @@ export function Profile() {
   return (
     <Container>
       <Tooltip title="Icaro Vieira">
-        <img src="https://github.com/IcaroSilvaFK.png" alt="Icaro Vieira" />
+        <img
+          src="https://res.cloudinary.com/dlf01tbs6/image/upload/v1670283656/5225004_whehlp.png"
+          alt="Icaro Vieira"
+        />
       </Tooltip>
 
       <div>

@@ -46,6 +46,7 @@ export const Body = styled.div`
     gap: 12px;
     > span {
       font-size: 1.375rem;
+      font-weight: ${({ theme }) => theme.fontWeights.semibold};
     }
 
     ul {

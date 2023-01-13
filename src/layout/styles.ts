@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 250px 1fr 350px;
+  grid-template-columns: 250px 1fr 300px;
 `
 
 export const Nav = styled.nav`
