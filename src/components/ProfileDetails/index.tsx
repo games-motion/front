@@ -1,3 +1,4 @@
+import { Button } from 'components/Button'
 import { DotsThree, Plus } from 'phosphor-react'
 import { Tooltip } from 'shared'
 import { formatDate } from 'utils/format-date'
@@ -43,9 +44,9 @@ export function ProfileDetails() {
         </div>
       </Body>
       <Footer>
-        <button>
+        <Button variant="ghost">
           mais <Plus size={16} />
-        </button>
+        </Button>
       </Footer>
     </Container>
   )
