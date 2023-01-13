@@ -16,26 +16,75 @@ export const FormContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   height: 100%;
-  padding: ${theme.space[60]};
+  padding: ${theme.space[8]};
   gap: 16px;
 
-  div {
+  .form-content {
     width: 100%;
-    max-width: 480px;
+    max-width: 560px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 3rem;
     text-transform: capitalize;
+    color: ${theme.colors.brand['blue-700']};
+    margin-bottom: 1rem;
   }
 
   span {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: ${theme.fontWeights.light};
+    color: ${theme.colors.gray[200]};
   }
+
+  ::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    width: 400px;
+    height: 400px;
+    background: ${theme.colors.brand['blue-400']};
+    filter: blur(120px);
+    opacity: 0.4;
+    border-radius: 50%;
+  }
+
+  ::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    width: 400px;
+    height: 400px;
+    background: ${theme.colors.brand['blue-600']};
+    filter: blur(120px);
+    opacity: 0.4;
+    border-radius: 50%;
+  }
+`
+
+export const SideBackground = styled.div`
+  max-width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1633545505446-586bf83717f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80')
+    rgba(0, 0, 0, 0.6);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 `
