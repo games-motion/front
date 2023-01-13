@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { Container } from './styles'
 import { Variants } from './Variants'
 
-interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
   size?: number | string
   px?: number | string
