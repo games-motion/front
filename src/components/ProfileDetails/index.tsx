@@ -1,7 +1,7 @@
-import { Button } from 'components/Button'
+import { Button } from '../Button'
 import { DotsThree, Plus } from 'phosphor-react'
-import { Tooltip } from 'shared'
-import { formatDate } from 'utils/format-date'
+import { Tooltip } from '../../shared'
+import { formatDate } from '../../utils/format-date'
 
 import { Container, Body, Footer, Header } from './styles'
 

@@ -1,5 +1,5 @@
 import { UsersFour } from 'phosphor-react'
-import { Tooltip } from 'shared'
+import { Tooltip } from '../../shared'
 
 import { Container, ListInfos, Tag, ContainerUserInformations, ProfileDetails } from './styles'
 
