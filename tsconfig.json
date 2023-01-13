@@ -3,6 +3,7 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "src",
+    "typeRoots": ["./node_modules/@types"],
     "paths": {
       "@components": ["components/"],
       "@styles": ["styles/"],
@@ -10,7 +11,7 @@
       "@configs": ["configs/"],
       "@infra": ["infra/"],
       "@title": ["infra/shared/Head"],
-      "@shared":["shared/"]
+      "@shared": ["shared/"]
     },
     "allowJs": true,
     "skipLibCheck": true,
