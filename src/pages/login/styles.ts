@@ -34,7 +34,7 @@ export const FormContainer = styled.div`
     font-size: 3rem;
     text-transform: capitalize;
     color: ${theme.colors.brand['blue-700']};
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   span {
@@ -72,6 +72,18 @@ export const FormContainer = styled.div`
     opacity: 0.4;
     border-radius: 50%;
   }
+
+  a {
+    font-weight: ${theme.fontWeights.bold};
+    color: ${theme.colors.brand['blue-300']};
+    text-align: right;
+    z-index: 1;
+    transition: 1s color;
+
+    :hover {
+      color: ${theme.colors.brand['blue-600']};
+    }
+  }
 `
 
 export const SideBackground = styled.div`
@@ -84,7 +96,7 @@ export const SideBackground = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
-
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: ${theme.colors.gray[50]}0D 0px 1px 1px 0px inset,
+    ${theme.colors.gray[50]}0D0px 50px 100px -20px,
+    ${theme.colors.neutral.black}40 0px 30px 60px -30px;
 `
