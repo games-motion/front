@@ -17,11 +17,10 @@ describe('<Button/> ', () => {
       </ThemeProvider>
     )
 
-    const buttonText = screen.getByText(/button/i)
-    const buttonRole = screen.getByRole('button')
+    const element = screen.getByRole('button')
 
-    expect(buttonText).toBeInTheDocument()
-    expect(buttonRole).toBeInTheDocument()
+    expect(element).toBeInTheDocument()
+    expect(element).toHaveTextContent(/button/i)
   })
 
   it('Should called on click function', () => {
@@ -33,10 +32,10 @@ describe('<Button/> ', () => {
       </ThemeProvider>
     )
 
-    const buttonText = screen.getByText(/button/i)
+    const element = screen.getByText(/button/i)
 
     act(() => {
-      buttonText.click()
+      element.click()
     })
 
     expect(mockFunction).toHaveBeenCalled()

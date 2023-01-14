@@ -7,7 +7,7 @@ export function NextMatches() {
   const dateTimeFormatted = formatDate(new Date().toISOString(), 'dd/MM/yyyy')
 
   return (
-    <Container>
+    <Container role="banner">
       <div>
         <h3>Próximas Partidas</h3>
       </div>
