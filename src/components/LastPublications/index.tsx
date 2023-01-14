@@ -2,7 +2,7 @@ import { Container } from './styles'
 
 export function LastPublications() {
   return (
-    <Container>
+    <Container role="banner">
       <div>
         <h3>Ultimas Publicações</h3>
       </div>

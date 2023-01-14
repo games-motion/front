@@ -1,7 +1,7 @@
 import { Input, Button } from '../../components'
 import Link from 'next/link'
 
-import { Container, FormContainer, SideBackground } from 'styles/pages/Login.styles'
+import { Container, FormContainer, SideBackground } from '../../styles/pages/Login.styles'
 
 export default function Login() {
   return (
