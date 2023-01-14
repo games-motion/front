@@ -8,6 +8,12 @@ export const Container = styled.main`
   flex-direction: column;
 
   gap: 28px;
+
+  > header {
+    h1 {
+      text-transform: uppercase;
+    }
+  }
 `
 
 export const SectionTeamDetails = styled.section`
@@ -122,4 +128,8 @@ export const ProgressSection = styled.section`
       color: ${({ theme }) => theme.colors.gray[300]};
     }
   }
+`
+export const DetailsTeamSection = styled.section`
+  display: flex;
+  justify-content: space-between;
 `

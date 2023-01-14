@@ -2,7 +2,7 @@ import { members } from '../../mocks/teams/members'
 
 import { Layout } from '../../layout'
 
-import { Button, CardMember, ProgressBar } from '../../components'
+import { Button, CardMember, NextMatches, ProgressBar, LastPublications } from '../../components'
 
 import {
   Container,
@@ -10,6 +10,7 @@ import {
   FirstSection,
   SectionTeamDetails,
   ProgressSection,
+  DetailsTeamSection,
 } from '../../styles/pages/Team.styles'
 
 export default function Page() {
@@ -37,6 +38,9 @@ export default function Page() {
         }
       >
         <Container>
+          <header>
+            <h1>Insanity Killers</h1>
+          </header>
           <FirstSection>
             <header>
               <h3>Campeonatos</h3>
@@ -75,6 +79,10 @@ export default function Page() {
             </div>
             <ProgressBar championships={22} quantity={7} />
           </ProgressSection>
+          <DetailsTeamSection>
+            <LastPublications />
+            <NextMatches />
+          </DetailsTeamSection>
         </Container>
       </Layout>
     </>

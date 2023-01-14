@@ -13,5 +13,6 @@ export { Button } from './Button'
 export { CardMember } from './CardMember'
 import Input from './input'
 export { ProgressBar } from './ProgressBar'
+export { LastPublications } from './LastPublications'
 
 export { Input }
