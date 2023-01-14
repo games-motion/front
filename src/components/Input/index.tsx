@@ -1,13 +1,13 @@
 import * as Styled from './styles'
 
 interface InputDataProps {
-  label: string
+  label?: string
   type?: 'email' | 'password' | 'text'
 }
 
 export type InputProps = JSX.IntrinsicElements['input'] & InputDataProps
 
-export default function Input({ label = 'login', placeholder, type = 'text' }: InputProps) {
+export function Input({ label = 'login', placeholder, type = 'text' }: InputProps) {
   return (
     <Styled.Container>
       <label>{label}</label>

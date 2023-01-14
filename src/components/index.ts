@@ -1,14 +1,11 @@
-
 //* Example
 //? export * from './atoms/Button'
 
-=======
 /**
  * @example export * from './atoms/Button'
  */
 
-
-export Input  from './Input'
+export { Input } from './Input'
 export { Profile } from './Profile'
 export { DefaultHeader } from './DefaultHeader'
 export { ProfileDetails } from './ProfileDetails'

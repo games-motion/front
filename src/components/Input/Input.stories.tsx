@@ -4,12 +4,12 @@ import { ThemeProvider } from 'styled-components'
 import { theme } from '../../styles/theme'
 import { GlobalStyle } from '../../styles/global'
 
-import { InputProps } from '.'
-import Component from '.'
+import { InputProps } from '../Input'
+import { Input } from '../Input'
 
 export default {
   title: 'Components/Input',
-  component: Component,
+  component: Input,
   args: {},
   decorators: [
     (Story) => (
@@ -21,7 +21,7 @@ export default {
   ],
 } as Meta<InputProps>
 
-export const Input: StoryObj<InputProps> = {
+export const Default: StoryObj<InputProps> = {
   args: {
     placeholder: 'Type your email!',
   },
