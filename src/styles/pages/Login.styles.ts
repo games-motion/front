@@ -36,7 +36,7 @@ export const FormContainer = styled.div`
     margin-bottom: 0.5rem;
   }
 
-  span {
+  > span {
     font-size: 1rem;
     font-weight: ${({ theme }) => theme.fontWeights.light};
     color: ${({ theme }) => theme.colors.gray[200]};
@@ -72,16 +72,23 @@ export const FormContainer = styled.div`
     border-radius: 50%;
   }
 
-  a {
-    font-weight: ${({ theme }) => theme.fontWeights.bold};
-    color: ${({ theme }) => theme.colors.brand['blue-300']};
-    text-align: right;
-    z-index: 1;
-    transition: 1s color;
+  .login-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    align-items: center;
 
-    :hover {
-      color: ${({ theme }) => theme.colors.brand['blue-600']};
+    > span {
+      font-size: 14px;
+      color: ${({ theme }) => theme.colors.gray[400]};
     }
+  }
+
+  .login-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
   }
 `
 
