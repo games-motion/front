@@ -57,6 +57,18 @@ export const theme = {
       800: '#363c56',
       900: '#171923',
     },
+    yellow: {
+      50: '#FFFFF0',
+      100: '#FEFCBF',
+      200: '#FAF089',
+      300: '#F6E05E',
+      400: '#ECC94B',
+      500: '#D69E2E',
+      600: '#B7791F',
+      700: '#975A16',
+      800: '#744210',
+      900: '#5F370E',
+    },
   },
   fontWeights: {
     hairline: 100,
@@ -136,5 +148,6 @@ export const theme = {
   },
   fonts: {
     montserrat: 'Montserrat, sans-serif',
+    openSans: 'Open Sans, sans-serif',
   },
 }

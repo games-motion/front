@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 import { ArrowComponent, Container } from './styles'
 
-interface IToplTipProps {
+export interface IToplTipProps {
   children: ReactNode
   title: string
 }

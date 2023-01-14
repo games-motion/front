@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import { theme } from 'styles/theme'
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
   grid-template-columns: 40% 1fr;
-  background-color: ${theme.colors.gray[900]};
-  color: ${theme.colors.neutral.white};
-  font-family: ${theme.fonts.montserrat};
+  background-color: ${({ theme }) => theme.colors.gray[900]};
+  color: ${({ theme }) => theme.colors.neutral.white};
+  font-family: ${({ theme }) => theme.fonts.montserrat};
 `
 
 export const FormContainer = styled.div`
@@ -19,7 +18,7 @@ export const FormContainer = styled.div`
   position: relative;
 
   height: 100%;
-  padding: ${theme.space[8]};
+  padding: ${({ theme }) => theme.space[8]};
   gap: 16px;
 
   .form-content {
@@ -33,14 +32,14 @@ export const FormContainer = styled.div`
   h1 {
     font-size: 3rem;
     text-transform: capitalize;
-    color: ${theme.colors.brand['blue-700']};
+    color: ${({ theme }) => theme.colors.brand['blue-700']};
     margin-bottom: 0.5rem;
   }
 
   > span {
     font-size: 1rem;
-    font-weight: ${theme.fontWeights.light};
-    color: ${theme.colors.gray[200]};
+    font-weight: ${({ theme }) => theme.fontWeights.light};
+    color: ${({ theme }) => theme.colors.gray[200]};
   }
 
   ::before {
@@ -52,7 +51,7 @@ export const FormContainer = styled.div`
     bottom: 50%;
     width: 400px;
     height: 400px;
-    background: ${theme.colors.brand['blue-400']};
+    background: ${({ theme }) => theme.colors.brand['blue-400']};
     filter: blur(120px);
     opacity: 0.4;
     border-radius: 50%;
@@ -67,7 +66,7 @@ export const FormContainer = styled.div`
     bottom: 50%;
     width: 400px;
     height: 400px;
-    background: ${theme.colors.brand['blue-600']};
+    background: ${({ theme }) => theme.colors.brand['blue-600']};
     filter: blur(120px);
     opacity: 0.4;
     border-radius: 50%;
@@ -81,7 +80,7 @@ export const FormContainer = styled.div`
 
     > span {
       font-size: 14px;
-      color: ${theme.colors.gray[400]};
+      color: ${({ theme }) => theme.colors.gray[400]};
     }
   }
 
@@ -103,7 +102,7 @@ export const SideBackground = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
-  box-shadow: ${theme.colors.gray[50]}0D 0px 1px 1px 0px inset,
-    ${theme.colors.gray[50]}0D0px 50px 100px -20px,
-    ${theme.colors.neutral.black}40 0px 30px 60px -30px;
+  box-shadow: ${({ theme }) => theme.colors.gray[50]}0D 0px 1px 1px 0px inset,
+    ${({ theme }) => theme.colors.gray[50]}0D0px 50px 100px -20px,
+    ${({ theme }) => theme.colors.neutral.black}40 0px 30px 60px -30px;
 `

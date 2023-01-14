@@ -1,15 +1,16 @@
-import { Profile } from 'components'
-import { DefaultHeader } from 'components/DefaultHeader'
 import { ReactNode } from 'react'
+
+import { Profile, DefaultHeader } from '../components'
 
 import { Container, Nav, Aside } from './styles'
 
 interface ILayoutProps {
   children: ReactNode
+  bar?: JSX.Element
 }
 
 export function Layout(props: ILayoutProps) {
-  const { children } = props
+  const { children, bar } = props
 
   return (
     <>
@@ -17,6 +18,7 @@ export function Layout(props: ILayoutProps) {
       <Container>
         <Nav>
           <Profile />
+          {bar}
         </Nav>
         {children}
         <Aside>

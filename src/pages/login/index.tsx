@@ -1,4 +1,4 @@
-import { Button, Input } from 'components/'
+import { Input, Button } from '../../components'
 import Link from 'next/link'
 
 import { Container, FormContainer, SideBackground } from 'styles/pages/Login.styles'
