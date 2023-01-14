@@ -19,13 +19,16 @@ export const Container = styled.div`
   ul {
     display: flex;
     flex-direction: column;
-    gap: 8px;
     li {
       text-align: center;
-      padding: 12px;
+      padding: 18px;
 
       &:hover {
         background: ${({ theme }) => theme.colors.gray[900]};
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid ${({ theme }) => theme.colors.gray[400]};
       }
     }
   }

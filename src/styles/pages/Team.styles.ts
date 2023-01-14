@@ -133,3 +133,37 @@ export const DetailsTeamSection = styled.section`
   display: flex;
   justify-content: space-between;
 `
+
+export const FooterSection = styled.footer`
+  background: ${({ theme }) => theme.colors.gray[800]};
+  border-radius: ${({ theme }) => theme.radius.md};
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-top: 6px solid ${({ theme }) => theme.colors.yellow[600]};
+
+  padding: 12px;
+
+  div:first-child {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    span {
+      font-size: 0.875rem;
+      color: ${({ theme }) => theme.colors.gray[300]};
+    }
+
+    h3 {
+      font-weight: ${({ theme }) => theme.fontWeights.normal};
+      text-transform: uppercase;
+    }
+  }
+
+  div {
+    p {
+      line-height: 150%;
+      color: ${({ theme }) => theme.colors.gray[300]};
+      font-family: ${({ theme }) => theme.fonts.openSans};
+    }
+  }
+`

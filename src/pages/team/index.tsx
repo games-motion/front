@@ -11,6 +11,7 @@ import {
   SectionTeamDetails,
   ProgressSection,
   DetailsTeamSection,
+  FooterSection,
 } from '../../styles/pages/Team.styles'
 
 export default function Page() {
@@ -83,6 +84,22 @@ export default function Page() {
             <LastPublications />
             <NextMatches />
           </DetailsTeamSection>
+          <FooterSection>
+            <div>
+              <h3>Descriação</h3>
+              <span>modificado 12/11/2019 às 19:00</span>
+            </div>
+            <div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non sunt sint cupiditate,
+                nesciunt accusamus sed exercitationem, nihil autem ea dignissimos, ab veritatis
+                doloremque quia quos fuga quibusdam asperiores facilis aperiam. Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Totam ipsum, non enim, quia nobis at
+                ratione, neque asperiores voluptatem tempore optio mollitia. Reprehenderit, vero ad.
+                Minus quae recusandae quis saepe.
+              </p>
+            </div>
+          </FooterSection>
         </Container>
       </Layout>
     </>
