@@ -13,8 +13,9 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
+  flex-direction: column;
   padding: 22px;
+  gap: 40px;
 `
 
 export const Aside = styled.aside``

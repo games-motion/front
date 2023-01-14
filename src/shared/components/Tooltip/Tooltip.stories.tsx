@@ -10,7 +10,10 @@ import { Button } from '../../../components/Button'
 export default {
   title: 'Components/Tooltip',
   component: Component,
-  args: {},
+  args: {
+    title: 'Hi im tooltip 🤗',
+    children: <Button variant="solid">Hover me!</Button>,
+  },
   decorators: [
     (Story) => (
       <ThemeProvider theme={theme}>
@@ -21,9 +24,4 @@ export default {
   ],
 } as Meta<IToplTipProps>
 
-export const Tooltip: StoryObj<IToplTipProps> = {
-  args: {
-    children: <Button variant="solid">Hover me!</Button>,
-    title: 'Hi im tooltip 🤗',
-  },
-}
+export const Tooltip: StoryObj<IToplTipProps> = {}

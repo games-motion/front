@@ -39,6 +39,7 @@ export const ContainerUserInformations = styled.div`
   align-items: center;
   gap: 4px;
   margin-top: 12px;
+  overflow: hidden;
 
   span:first-child {
     font-weight: bold;
@@ -47,9 +48,19 @@ export const ContainerUserInformations = styled.div`
 
   span {
     font-size: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   span:last-child {
     font-style: italic;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `
 

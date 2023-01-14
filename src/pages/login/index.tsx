@@ -1,4 +1,4 @@
-import { Input } from 'components/'
+import { Input } from '../../components'
 import Link from 'next/link'
 
 import { Container, FormContainer, SideBackground } from './styles'
