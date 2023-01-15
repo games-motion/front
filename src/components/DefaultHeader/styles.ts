@@ -22,6 +22,10 @@ export const SubContainer = styled.div`
     display: flex;
     align-items: flex-start;
     gap: 8px;
+
+    img {
+      max-width: 150px;
+    }
   }
 `
 

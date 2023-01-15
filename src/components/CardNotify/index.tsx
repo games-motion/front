@@ -3,7 +3,14 @@ import { useTheme } from 'styled-components'
 
 import { Container } from './styles'
 
-export function CardNotify() {
+interface ICardNotifyProps {
+  title: string
+  id: string
+}
+
+export function CardNotify(props: ICardNotifyProps) {
+  const { title } = props
+
   const { colors } = useTheme()
 
   return (
@@ -12,7 +19,7 @@ export function CardNotify() {
         <Share size={22} color={colors.brand['blue-500']} />
       </button>
 
-      <span>Olá tenho quer entrar para o meu time?</span>
+      <span>{title}</span>
       <button title="Excluir">
         <TrashSimple size={22} color={colors.red[500]} />
       </button>

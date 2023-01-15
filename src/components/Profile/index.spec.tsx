@@ -1,10 +1,14 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { ThemeProvider } from 'styled-components'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 import { Profile } from '.'
 import { theme } from '../../styles/theme'
+
+vi.mock('@formkit/auto-animate/react', () => ({
+  useAutoAnimate: vi.fn().mockReturnValue([]),
+}))
 
 describe('<Profile />', () => {
   it('should render component', () => {

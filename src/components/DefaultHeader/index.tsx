@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Bell } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 
@@ -16,18 +17,15 @@ export function DefaultHeader() {
     <Container>
       <SubContainer>
         <div>
-          <img
-            src="https://esl.com/wp-content/uploads/2019/01/ESL_Logo_Stacked_RGB_POS.svg"
-            title="ESL logo"
-          />
+          <img src="/assets/autodraw_14_01_2023_13_33_22-removebg-preview 1.png" title="ESL logo" />
           <Tooltip
             variant="dark"
             title={
               <ContainerNotify>
-                <CardNotify />
-                <CardNotify />
-                <CardNotify />
-                <CardNotify />
+                <CardNotify title="Olá quer entrar para o meu time?" id="" />
+                <CardNotify title="Olá quer entrar para o meu time?" id="" />
+                <CardNotify title="Olá quer entrar para o meu time?" id="" />
+                <CardNotify title="Olá quer entrar para o meu time?" id="" />
               </ContainerNotify>
             }
           >
@@ -40,9 +38,21 @@ export function DefaultHeader() {
         <div />
         <Navigation>
           <ul>
-            <li>Home</li>
-            <li>Social</li>
-            <li>Profile</li>
+            <li>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/social">
+                <a>Social</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/profile">
+                <a>Profile</a>
+              </Link>
+            </li>
           </ul>
         </Navigation>
       </SubContainer>

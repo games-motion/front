@@ -25,8 +25,7 @@ import {
   TextItalic,
   TextUnderline,
 } from 'phosphor-react'
-import { BlockButtonMark, ButtonMark, Header } from './styles'
-import { Tooltip } from '../Tooltip'
+import { BlockButtonMark, Body, ButtonMark, Header } from './styles'
 
 const HOTKEYS = {
   'mod+b': 'bold',
@@ -104,23 +103,25 @@ export function Editor() {
         <BlockButton format="right" icon={<TextAlignRight size={20} />} />
         <BlockButton format="justify" icon={<TextAlignJustify size={20} />} />
       </Header>
-      <Editable
-        renderElement={renderElement}
-        renderLeaf={renderLeaf}
-        placeholder="Enter some rich text…"
-        spellCheck
-        autoFocus
-        onKeyDown={(event) => {
-          for (const hotkey in HOTKEYS) {
-            if (isHotkey(hotkey, event as KeyboardEvent)) {
-              event.preventDefault()
-              const hotkeyInHotKeys = hotkey as keyof typeof HOTKEYS
-              const mark = HOTKEYS[hotkeyInHotKeys]
-              toggleMark(editor, mark)
+      <Body>
+        <Editable
+          renderElement={renderElement}
+          renderLeaf={renderLeaf}
+          placeholder="Enter some rich text…"
+          spellCheck
+          autoFocus
+          onKeyDown={(event) => {
+            for (const hotkey in HOTKEYS) {
+              if (isHotkey(hotkey, event as KeyboardEvent)) {
+                event.preventDefault()
+                const hotkeyInHotKeys = hotkey as keyof typeof HOTKEYS
+                const mark = HOTKEYS[hotkeyInHotKeys]
+                toggleMark(editor, mark)
+              }
             }
-          }
-        }}
-      />
+          }}
+        />
+      </Body>
     </Slate>
   )
 }

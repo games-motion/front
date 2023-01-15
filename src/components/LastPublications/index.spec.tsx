@@ -1,4 +1,4 @@
-import { describe, it } from 'vitest'
+import { describe, it, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
 import '@testing-library/jest-dom'
@@ -6,6 +6,10 @@ import '@testing-library/jest-dom'
 import { theme } from '../../styles/theme'
 
 import { LastPublications } from '.'
+
+vi.mock('@formkit/auto-animate/react', () => ({
+  useAutoAnimate: vi.fn().mockReturnValue([]),
+}))
 
 describe('<LastPublications />', () => {
   it('should render component', () => {
