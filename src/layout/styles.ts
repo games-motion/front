@@ -8,6 +8,12 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-columns: 250px 1fr 300px;
+
+  @media screen and (max-width: 840px) {
+    display: flex;
+
+    padding: 20px;
+  }
 `
 
 export const Nav = styled.nav`
@@ -17,6 +23,14 @@ export const Nav = styled.nav`
   flex-direction: column;
   padding: 22px;
   gap: 40px;
+
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
 `
 
-export const Aside = styled.aside``
+export const Aside = styled.aside`
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
+`

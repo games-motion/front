@@ -1,3 +1,5 @@
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
 import { Container } from './styles'
 
 export interface IProgressBarProps {
@@ -6,12 +8,13 @@ export interface IProgressBarProps {
 }
 
 export function ProgressBar(props: IProgressBarProps) {
+  const [parentRef] = useAutoAnimate<HTMLDivElement>()
   const { quantity, championships } = props
 
   const progress = (quantity / championships) * 100
 
   return (
-    <Container progress={progress}>
+    <Container progress={progress} ref={parentRef}>
       <div className="progress" />
     </Container>
   )

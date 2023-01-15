@@ -14,6 +14,9 @@ export const SubContainer = styled.div`
   width: 100%;
 
   padding: 22px 0;
+  @media screen and (max-width: 840px) {
+    padding: 20px;
+  }
 `
 
 export const Navigation = styled.nav`

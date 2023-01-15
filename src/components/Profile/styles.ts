@@ -8,7 +8,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
 
   border-radius: ${({ theme }) => theme.radius.base};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
