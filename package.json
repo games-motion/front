@@ -33,7 +33,6 @@
     "slate-history": "^0.86.0",
     "slate-react": "^0.88.2",
     "styled-components": "^5.3.5",
-    "tinymce": "^6.3.1",
     "zod": "^3.20.2"
   },
   "devDependencies": {
