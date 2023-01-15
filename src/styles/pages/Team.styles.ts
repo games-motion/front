@@ -10,8 +10,13 @@ export const Container = styled.main`
   gap: 28px;
 
   > header {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray[400]};
     h1 {
       text-transform: uppercase;
+
+      @media screen and (max-width: 500px) {
+        font-size: 1.8rem;
+      }
     }
   }
 `
@@ -61,7 +66,13 @@ export const FirstSection = styled.section`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 66px;
+
+    @media screen {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
   }
 
   .footer {
@@ -108,6 +119,12 @@ export const ProgressSection = styled.section`
 export const DetailsTeamSection = styled.section`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    gap: 22px;
+  }
 `
 
 export const FooterSection = styled.footer`
@@ -132,6 +149,14 @@ export const FooterSection = styled.footer`
     h3 {
       font-weight: ${({ theme }) => theme.fontWeights.normal};
       text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+
+      span {
+        align-self: flex-end;
+      }
     }
   }
 

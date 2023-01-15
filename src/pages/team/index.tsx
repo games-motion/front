@@ -1,3 +1,5 @@
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
 import { members } from '../../mocks/teams/members'
 
 import { Layout } from '../../layout'
@@ -22,6 +24,8 @@ import {
 } from '../../styles/pages/Team.styles'
 
 export default function Page() {
+  const [parentRef] = useAutoAnimate<HTMLUListElement>()
+
   return (
     <>
       <Layout
@@ -30,7 +34,7 @@ export default function Page() {
             <SectionDetailsHeader>
               <h3>Line UP</h3>
             </SectionDetailsHeader>
-            <ul>
+            <ul ref={parentRef}>
               {members.map((member) => (
                 <CardMember
                   key={member.nickname}
@@ -53,7 +57,7 @@ export default function Page() {
             <header>
               <h3>Campeonatos</h3>
             </header>
-            <ul>
+            <ul ref={parentRef}>
               <CardChampionship />
               <CardChampionship />
               <CardChampionship />
@@ -67,7 +71,7 @@ export default function Page() {
               <h3>Rating</h3>
               <span>22/7</span>
             </div>
-            <ProgressBar championships={22} quantity={7} />
+            <ProgressBar championships={22} quantity={6} />
           </ProgressSection>
           <DetailsTeamSection>
             <LastPublications />

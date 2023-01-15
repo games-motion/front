@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Profile, DefaultHeader } from '../components'
+import { Profile, DefaultHeader, NavMobile } from '../components'
 
 import { Container, Nav, Aside } from './styles'
 
@@ -16,6 +16,7 @@ export function Layout(props: ILayoutProps) {
     <>
       <DefaultHeader />
       <Container>
+        <NavMobile nested={bar} />
         <Nav>
           <Profile />
           {bar}
