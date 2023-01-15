@@ -2,7 +2,14 @@ import { members } from '../../mocks/teams/members'
 
 import { Layout } from '../../layout'
 
-import { Button, CardMember, NextMatches, ProgressBar, LastPublications } from '../../components'
+import {
+  Button,
+  CardMember,
+  NextMatches,
+  ProgressBar,
+  LastPublications,
+  CardChampionship,
+} from '../../components'
 
 import {
   Container,
@@ -47,27 +54,9 @@ export default function Page() {
               <h3>Campeonatos</h3>
             </header>
             <ul>
-              <li>
-                <img src="/assets/trophy-svgrepo-com.svg" />
-                <div>
-                  <strong>1º Lugar</strong>
-                  <span>ESL América Latina</span>
-                </div>
-              </li>
-              <li>
-                <img src="/assets/trophy-svgrepo-com.svg" />
-                <div>
-                  <strong>2º Lugar</strong>
-                  <span>ESL América Latina</span>
-                </div>
-              </li>
-              <li>
-                <img src="/assets/trophy-svgrepo-com.svg" />
-                <div>
-                  <strong>3º Lugar</strong>
-                  <span>ESL América Latina</span>
-                </div>
-              </li>
+              <CardChampionship />
+              <CardChampionship />
+              <CardChampionship />
             </ul>
             <div className="footer">
               <Button variant="link">ver mais</Button>

@@ -62,30 +62,6 @@ export const FirstSection = styled.section`
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    li {
-      box-shadow: 0 0 10px ${({ theme }) => theme.colors.green[500]};
-      padding: 12px;
-      border-radius: ${({ theme }) => theme.radius.md};
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      img {
-        max-width: 80px;
-      }
-      div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-
-        strong {
-          font-size: 1.125rem;
-          text-transform: uppercase;
-        }
-      }
-    }
   }
 
   .footer {
