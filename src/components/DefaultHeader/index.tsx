@@ -48,11 +48,11 @@ export function DefaultHeader() {
                 <a>Social</a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/profile">
                 <a>Profile</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </Navigation>
       </SubContainer>

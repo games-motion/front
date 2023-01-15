@@ -18,7 +18,7 @@ export const Container = styled.div`
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: center;
+  margin-top: 100px;
   align-items: flex-start;
   flex-direction: column;
   padding: 22px;
