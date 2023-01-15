@@ -13,7 +13,8 @@
     "test": "vitest",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.2",
@@ -56,6 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/coverage-istanbul": "^0.27.1",
     "babel-loader": "^8.3.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "3.3.0",
