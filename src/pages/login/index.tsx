@@ -11,22 +11,23 @@ interface LoginInputDataProps {
   password: string
 }
 
-
-
-const { register, handleSubmit, formState } = useForm<LoginInputDataProps>({ resolver: zodResolver(LoginSchema) })
-
 export default function Login() {
+  const { register, handleSubmit, formState } = useForm<LoginInputDataProps>({
+    resolver: zodResolver(LoginSchema),
+  })
+
   return (
     <>
       <Container>
         <FormContainer>
-          <form className="form-content" onSubmit={handleSubmit(() => { }}>
+          <form className="form-content" onSubmit={handleSubmit((data) => console.log(data))}>
             <h1>Games Motion</h1>
             <span>Bem vindo a sua nova experiência gamer, por favor faça o login.</span>
 
             <Input
               label="Login"
               placeholder="Digite seu email"
+              required={true}
               type="email"
               {...register('email')}
             />
@@ -34,6 +35,7 @@ export default function Login() {
             <Input
               label="Senha"
               placeholder="Digite sua senha"
+              required={true}
               type="password"
               {...register('password')}
             />
