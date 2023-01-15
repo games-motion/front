@@ -30,7 +30,11 @@ export function useFetch<T>(
     if (!options?.interval) return
 
     const interval = setInterval(async () => {
-      await handleRequest()
+      try {
+        await handleRequest()
+      } catch (err) {
+        console.error(err)
+      }
     }, options?.interval)
 
     return () => {
