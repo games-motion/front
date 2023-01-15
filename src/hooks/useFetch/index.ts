@@ -1,17 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useReducer } from 'react'
-
-enum ACTION_CREATOR_TYPES {
-  PENDING,
-  ERROR,
-  FETCHED,
-}
-
-interface IInitialStateProps<T> {
-  isLoading: boolean
-  isError: boolean
-  data: T | null
-}
+import { initialState, reducer, ACTION_CREATOR_TYPES } from './reducer'
 
 interface IUseFetchReturnProps<T> {
   isLoading: boolean
@@ -21,46 +10,33 @@ interface IUseFetchReturnProps<T> {
   removeCache: () => void
 }
 
-type IActionProps<T> =
-  | { type: ACTION_CREATOR_TYPES.PENDING }
-  | { type: ACTION_CREATOR_TYPES.ERROR }
-  | { type: ACTION_CREATOR_TYPES.FETCHED; payload: T }
-
-const initialState = {
-  isLoading: false,
-  isError: false,
-  data: null,
+type UseFetchOptions = {
+  interval?: number
+  retries?: number
 }
 
-function reducer<K>(state: IInitialStateProps<K>, action: IActionProps<K>) {
-  switch (action.type) {
-    case ACTION_CREATOR_TYPES.PENDING: {
-      return {
-        ...state,
-        isLoading: true,
-      }
-    }
-    case ACTION_CREATOR_TYPES.ERROR: {
-      return {
-        ...state,
-        isError: true,
-      }
-    }
-    case ACTION_CREATOR_TYPES.FETCHED: {
-      return {
-        ...state,
-        data: action.payload,
-      }
-    }
-  }
-}
-
-export function useFetch<T>(key: string, fetcher: () => Promise<T>): IUseFetchReturnProps<T> {
+export function useFetch<T>(
+  key: string,
+  fetcher: () => Promise<T>,
+  options?: UseFetchOptions
+): IUseFetchReturnProps<T> {
   const [{ data, isError, isLoading }, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
     handleRequest()
   }, [])
+
+  useEffect(() => {
+    if (!options?.interval) return
+
+    const interval = setInterval(async () => {
+      await handleRequest()
+    }, options?.interval)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [options?.interval])
 
   async function refetch() {
     try {
@@ -86,6 +62,7 @@ export function useFetch<T>(key: string, fetcher: () => Promise<T>): IUseFetchRe
       })
     } catch (err) {
       console.log(err)
+
       dispatch({
         type: ACTION_CREATOR_TYPES.ERROR,
       })
