@@ -25,6 +25,7 @@
     "polished": "^4.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-shimmer-effects": "^1.0.2",
     "styled-components": "^5.3.5",
     "zod": "^3.20.2"
   },

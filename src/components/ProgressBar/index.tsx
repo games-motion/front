@@ -1,5 +1,7 @@
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
+import { Tooltip } from '../../shared'
+
 import { Container } from './styles'
 
 export interface IProgressBarProps {
@@ -13,9 +15,13 @@ export function ProgressBar(props: IProgressBarProps) {
 
   const progress = (quantity / championships) * 100
 
+  const percentage = progress.toString().split('.')[0].padStart(2, '0')
+
   return (
     <Container progress={progress} ref={parentRef}>
-      <div className="progress" />
+      <Tooltip title={`${percentage}%`}>
+        <div className="progress" />
+      </Tooltip>
     </Container>
   )
 }

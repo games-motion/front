@@ -69,9 +69,9 @@ export default function Page() {
           <ProgressSection>
             <div>
               <h3>Rating</h3>
-              <span>22/7</span>
+              <span>22/9</span>
             </div>
-            <ProgressBar championships={22} quantity={6} />
+            <ProgressBar championships={22} quantity={9} />
           </ProgressSection>
           <DetailsTeamSection>
             <LastPublications />
