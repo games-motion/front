@@ -4,11 +4,12 @@ import { ArrowComponent, Container } from './styles'
 
 export interface IToplTipProps {
   children: ReactNode
-  title: string
+  title: ReactNode
+  variant?: 'dark' | 'light'
 }
 
 export function Tooltip(props: IToplTipProps) {
-  const { children, title } = props
+  const { children, title, variant } = props
 
   return (
     <TooltipPrimitive.Provider>
@@ -16,8 +17,8 @@ export function Tooltip(props: IToplTipProps) {
         <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal>
           <TooltipPrimitive.Content sideOffset={5}>
-            <Container>{title}</Container>
-            <ArrowComponent />
+            <Container variant={variant || 'light'}>{title}</Container>
+            <ArrowComponent variant={variant || 'light'} />
           </TooltipPrimitive.Content>
         </TooltipPrimitive.Portal>
       </TooltipPrimitive.Root>

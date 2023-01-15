@@ -19,7 +19,7 @@ export function ProgressBar(props: IProgressBarProps) {
 
   return (
     <Container progress={progress} ref={parentRef}>
-      <Tooltip title={`${percentage}%`}>
+      <Tooltip title={`${percentage}%`} variant="dark">
         <div className="progress" />
       </Tooltip>
     </Container>
