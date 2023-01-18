@@ -1,3 +1,4 @@
+import { darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,7 +15,17 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     font-family: ${({ theme }) => theme.fonts.montserrat};
     background:${({ theme }) => theme.colors.gray[900]};
-    color:${({ theme }) => theme.colors.gray[100]}
+    color:${({ theme }) => theme.colors.gray[100]};
+
+    &::-webkit-scrollbar{
+      max-width: 10px;
+      background:transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => darken(0.4, theme.colors.brand['blue-500'])};
+      border-radius:${({ theme }) => theme.radius.sm}
+    }
   }
 
   button{

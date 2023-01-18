@@ -52,6 +52,7 @@ export const FirstSection = styled.section`
   background: ${({ theme }) => theme.colors.gray[800]};
   border-radius: ${({ theme }) => theme.radius.base};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-top: 6px solid ${({ theme }) => theme.colors.yellow[600]};
 
   padding: 12px;
 

@@ -39,7 +39,7 @@ export function DefaultHeader() {
         <Navigation>
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/home">
                 <a>Home</a>
               </Link>
             </li>
