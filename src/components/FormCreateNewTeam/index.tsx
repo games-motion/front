@@ -1,26 +1,22 @@
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { ChangeEvent, useEffect, useId, useState } from 'react'
+import { useEffect } from 'react'
 import { HandGrabbing, Plus, TextH } from 'phosphor-react'
 
 import { Button } from '../Button'
-import { NewTeamForm, schema } from '../../shared/schemas/new-team-schema'
 import { Center, Column, Container, InputFileContainer, Row } from './styles'
+import { useForm } from './hooks/useForm'
 
 export function FormCreateNewTeam() {
-  const [base64Image, setBase64Image] = useState('')
   const {
-    register,
+    base64Image,
     handleSubmit,
-    setValue,
-    formState: { errors },
-    watch,
-  } = useForm<NewTeamForm>({
-    resolver: zodResolver(schema),
-  })
-  const inputFileID = useId()
-  const inputTitleID = useId()
-  const textareaID = useId()
+    inputFileID,
+    inputTitleID,
+    register,
+    textareaID,
+    onSubmit,
+    handleDropItem,
+    onChangeInputFile,
+  } = useForm()
 
   useEffect(() => {
     window.addEventListener(
@@ -38,50 +34,6 @@ export function FormCreateNewTeam() {
       false
     )
   }, [])
-
-  function onSubmit(data: NewTeamForm) {
-    const formData = new FormData()
-    //multipart/form-data
-    formData.append('title', data.title)
-    formData.append('image', data.image)
-    formData.append('description', data?.description || '')
-  }
-
-  function onChangeInputFile(e: ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files
-
-    if (!file) return
-
-    const targeFile = file[0]
-    const reader = new FileReader()
-
-    reader.onload = async () => {
-      setBase64Image(reader.result as string)
-    }
-    reader.readAsDataURL(targeFile)
-    if (!file) return
-
-    console.log(file[0])
-
-    setValue('image', file as unknown as File)
-  }
-
-  function handleDropItem(file: FileList) {
-    if (!file) return
-
-    const targeFile = file[0]
-    const reader = new FileReader()
-
-    reader.onload = async () => {
-      setBase64Image(reader.result as string)
-    }
-    reader.readAsDataURL(targeFile)
-    if (!file) return
-
-    console.log(file[0])
-
-    setValue('image', file as unknown as File)
-  }
 
   return (
     <Container>

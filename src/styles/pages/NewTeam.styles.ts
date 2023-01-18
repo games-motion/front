@@ -5,5 +5,8 @@ export const Container = styled.div`
 
   h3 {
     margin-bottom: 12px;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray[400]};
+    padding: 4px 0;
+    text-transform: uppercase;
   }
 `
