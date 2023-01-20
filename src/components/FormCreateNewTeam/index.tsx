@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
-import { HandGrabbing, Plus, TextH } from 'phosphor-react'
+import { HandGrabbing, Plus, TextH, Trash } from 'phosphor-react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 import { Button } from '../Button'
-import { Center, Column, Container, InputFileContainer, Row } from './styles'
+import { Center, Column, Container, InputFileContainer, Row, ColumnInputFile } from './styles'
 import { useForm } from './hooks/useForm'
 
 export function FormCreateNewTeam() {
@@ -16,7 +17,9 @@ export function FormCreateNewTeam() {
     onSubmit,
     handleDropItem,
     onChangeInputFile,
+    handleResetInputFileValue,
   } = useForm()
+  const [animatedParent] = useAutoAnimate<HTMLDivElement>()
 
   useEffect(() => {
     window.addEventListener(
@@ -46,22 +49,29 @@ export function FormCreateNewTeam() {
           </Row>
         </Column>
         <Center>
-          <InputFileContainer
-            bg={base64Image}
-            draggable
-            onDrop={(e) => handleDropItem(e.dataTransfer.files)}
-          >
-            <input type="file" onChange={onChangeInputFile} id={inputFileID} />
-            <label htmlFor={inputFileID}>
-              <div>
-                <Plus size={32} />
-                <span>Clique para adicionar uma imagem</span>
-              </div>
-              <div>
-                Ou arraste a imagem <HandGrabbing size={32} />
-              </div>
-            </label>
-          </InputFileContainer>
+          <ColumnInputFile ref={animatedParent}>
+            <InputFileContainer
+              bg={base64Image}
+              draggable
+              onDrop={(e) => handleDropItem(e.dataTransfer.files)}
+            >
+              <input type="file" onChange={onChangeInputFile} id={inputFileID} />
+              <label htmlFor={inputFileID}>
+                <div>
+                  <Plus size={32} />
+                  <span>Clique para adicionar uma imagem</span>
+                </div>
+                <div>
+                  Ou arraste a imagem <HandGrabbing size={32} />
+                </div>
+              </label>
+            </InputFileContainer>
+            {base64Image && (
+              <button onClick={handleResetInputFileValue} title="Excluir imagem">
+                <Trash size={20} weight="bold" />
+              </button>
+            )}
+          </ColumnInputFile>
         </Center>
         <Column>
           <label htmlFor={textareaID}>Descrição</label>

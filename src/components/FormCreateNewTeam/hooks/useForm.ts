@@ -57,6 +57,13 @@ export function useForm() {
     setValue('image', file as unknown as File)
   }
 
+  function handleResetInputFileValue() {
+    reset({
+      image: null,
+    })
+    setBase64Image('')
+  }
+
   return {
     register,
     handleSubmit,
@@ -69,5 +76,6 @@ export function useForm() {
     onSubmit,
     handleDropItem,
     onChangeInputFile,
+    handleResetInputFileValue,
   }
 }

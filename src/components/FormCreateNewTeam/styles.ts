@@ -75,7 +75,7 @@ export const InputFileContainer = styled.div<IContainerInputFileBackground>`
     }
   }
 
-  ${({ theme, bg }) =>
+  ${({ bg }) =>
     bg &&
     css`
       background-image: url('${bg}');
@@ -129,4 +129,23 @@ export const Center = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+export const ColumnInputFile = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  button {
+    padding: 8px;
+    background: ${({ theme }) => transparentize(0.9, theme.colors.red[500])};
+
+    margin-top: 12px;
+    color: ${({ theme }) => theme.colors.red[500]};
+
+    transition: all linear 0.3s;
+
+    &:hover {
+      background: ${({ theme }) => transparentize(0.7, theme.colors.red[500])};
+    }
+  }
 `
