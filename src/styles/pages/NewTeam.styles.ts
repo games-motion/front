@@ -9,4 +9,8 @@ export const Container = styled.div`
     padding: 4px 0;
     text-transform: uppercase;
   }
+
+  @media screen and (max-width: 800px) {
+    margin: 40px auto;
+  }
 `

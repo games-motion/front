@@ -87,6 +87,17 @@ export const InputFileContainer = styled.div<IContainerInputFileBackground>`
         display: none;
       }
     `}
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+
+    label div {
+      flex-direction: column;
+      padding: 8px;
+    }
+  }
 `
 
 export const Row = styled.div`
